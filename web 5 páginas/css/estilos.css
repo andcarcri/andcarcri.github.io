@@ -1,0 +1,41 @@
+body {
+text-align: center;
+background-image: url("../images/fondo.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h1 {
+background-color: gray;
+color: white;
+border-left: 7px solid red;
+}
+
+img {
+border: 5px solid black;
+border-radius: 15px;
+width: 300px;
+}
+
+.mi-imagen {
+box-shadow: 5px 10px 15px rgba(0,0,0,0.7));
+}
+
+ul {
+list-style-type: none;
+}
+
+li {
+list-style-type: none;
+border: 1px solid black;
+display: inline;
+}
+
+.noto-sans-<uniquifier> {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
