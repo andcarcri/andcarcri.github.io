@@ -3,6 +3,7 @@ text-align: center;
 background-image: url("../images/fondo.jpg");
 background-repeat: no-repeat;
 background-size: cover;
+background-attachment: fixed;
 }
 
 h1 {
@@ -18,7 +19,7 @@ width: 300px;
 }
 
 .mi-imagen {
-box-shadow: 5px 10px 15px rgba(0,0,0,0.7));
+box-shadow: 5px 10px 15px rgba(0,0,0,0.7);
 }
 
 ul {
@@ -31,11 +32,9 @@ border: 1px solid black;
 display: inline;
 }
 
-.noto-sans-<uniquifier> {
-    font-family: "Noto Sans", sans-serif;
+* {
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 200;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+}
