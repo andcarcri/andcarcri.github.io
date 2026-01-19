@@ -1,18 +1,20 @@
 body {
     background-image: url(/FloatExtra/images/imagefondo.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 0%;
     padding: 0%;
 }
 
-h1{
+#header {
+    margin-top: 50px;
     text-align: center;
 }
 
 #menu {
     background-color: white;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.9em;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -54,18 +56,27 @@ h1{
     color: #443266;
     background-color: black;
     text-decoration: none;
+}
 
+#imageLeft {
+  float: left;
+  text-align: center;
+  padding-bottom: 5px;
+  width: 50px;
+  height: 50px
+}
 
 #textCookie {
     text-align: center;
   }
       
 #cookieEU {
-    position: absolute;
-    top: 50%;
+    text-align: center;
+    position: fixed;
+    top: 30%;
     left: 10%;
     right: 10%;
-    border:2px solid red;
+    border:2px solid black;
     background-color: white;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -73,16 +84,19 @@ h1{
   }
 
 .button {
-    background-color: #097054; /* Green */
-    border: none;
-    color: white;
+    background-color: rgba(0, 145, 255, 0.646);
+    border-color: black;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    text-align: center;
 }
 
 .button:hover {
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+    background-color: rgba(255, 0, 0, 0.301);
 }
