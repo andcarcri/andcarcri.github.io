@@ -1,3 +1,14 @@
+body {
+    background-image: url(/FloatExtra/images/imagefondo.jpg);
+    background-repeat: no-repeat;
+    margin: 0%;
+    padding: 0%;
+}
+
+h1{
+    text-align: center;
+}
+
 #menu {
     background-color: white;
     text-align: center;
@@ -5,6 +16,7 @@
     position: fixed;
     top: 0px;
     width: 100%;
+    margin-left: 0%;
 }
 
 #menu a {
@@ -18,6 +30,59 @@
 }
 
 #menu li a:hover{
-    color: red;
-    text-decoration: underline red 2px;
+    color: rgba(255, 0, 0, 0.651);
+    text-decoration: underline rgba(255, 0, 0, 0.651) 2px;
   }
+
+#footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    color: black;
+    border-top: 2px solid black;
+    clear: both;
+  }
+  
+#footer a{
+    color: black;
+    text-decoration: none;
+  }
+  
+#footer a:hover{
+    color: #443266;
+    background-color: black;
+    text-decoration: none;
+
+
+#textCookie {
+    text-align: center;
+  }
+      
+#cookieEU {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    border:2px solid red;
+    background-color: white;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    box-shadow: 2px 2px 50px black;
+  }
+
+.button {
+    background-color: #097054; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
