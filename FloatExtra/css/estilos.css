@@ -4,6 +4,7 @@ body {
     background-size: cover;
     margin: 0%;
     padding: 0%;
+    background-position: center;
 }
 
 h1{
@@ -74,7 +75,6 @@ h2{
   margin-right: 10px;
   margin-top: 10px;
   background-color: white;
-
 }
 
 #two {
@@ -83,6 +83,7 @@ h2{
   margin-right: 20px;
   margin-bottom: 30px;
   border: 2px solid black;
+  height: 500px;
   overflow-y: scroll;
 }
 
@@ -98,10 +99,40 @@ margin-left: 1em;
 #rightNav{
   float:right;
   width: 15%;
-  margin-right: 2%;
-  margin-top: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  margin-right: 50px;
   text-align: center;
+}
+
+#rightNav li{
+  list-style-type: none;
+}
+
+#rightNav li a:hover{
+  text-decoration: solid black 2px;
+}
+
+
+.imgli{
+  width: 150px;
+}
+
+.imgli2{
+  width: 80px;
+}
+
+.imgli3{
+  width: 80px;
+  margin-top: 30px;
+}
+
+.imgli4{
+  width: 80px;
+  margin-top: 30px;
+}
+
+.imgli5{
+  width: 80px;
+  margin-top: 30px;
 }
 
 #footer{
@@ -114,18 +145,6 @@ margin-left: 1em;
     border-top: 2px solid black;
     clear: both;
   }
-  
-#footer a{
-    color: black;
-    text-decoration: none;
-  }
-  
-#footer a:hover{
-    color: #443266;
-    background-color: black;
-    text-decoration: none;
-}
-
 
 #textCookie {
     text-align: center;
@@ -160,4 +179,8 @@ margin-left: 1em;
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     color: white;
     background-color: rgba(255, 0, 0, 0.301);
+}
+
+@media all and (max-width: 300px) {
+
 }
