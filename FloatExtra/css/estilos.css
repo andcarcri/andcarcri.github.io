@@ -100,23 +100,18 @@ margin-left: 1em;
 
 #rightNav{
   float:right;
-  width: 15%;
+  width: 10%;
   margin-right: 50px;
   text-align: center;
 }
 
 #rightNav li{
   list-style-type: none;
+  display: block;
 }
 
 #rightNav li a:hover{
-  text-decoration: solid black 2px;
-}
-
-
-.imgli{
-  width: 150px;
-  overflow: auto;
+border-bottom: solid black 3px; 
 }
 
 .imgli2{
@@ -184,6 +179,34 @@ margin-left: 1em;
     background-color: rgba(255, 0, 0, 0.301);
 }
 
-@media all and (max-width: 300px) {
+@media all and (max-width: 400px) {
+#main{
+  width: 90%;
+}
+  #rightNav{
+  float: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 0px;
+}
+#rightNav li{
+  display: inline-block;
+}
 
+.imgli2{
+  width: 50px;
+}
+
+.imgli3{
+  width: 50px;
+}
+
+.imgli4{
+  width: 50px;
+}
+
+.imgli5{
+  width: 50px;
+}
 }
