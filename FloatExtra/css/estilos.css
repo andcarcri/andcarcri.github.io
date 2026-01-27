@@ -178,21 +178,57 @@ border-bottom: solid black 3px;
     color: white;
     background-color: rgba(255, 0, 0, 0.301);
 }
+@media all and (max-width: 700px) {
+  #header {
+    margin-top: 50px;
+  }
+  #main{
+    width: 90%;
+  }
+    #rightNav{
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .imageRight {
+    overflow: auto;
+  }
+  #rightNav li{
+    display: inline-block;
+  }
+  .imgli2{
+    width: 60px;
+  }
+  
+  .imgli3{
+    width: 60px;
+  }
+  
+  .imgli4{
+    width: 60px;
+  }
+  
+  .imgli5{
+    width: 60px;
+  }
+}
 
 @media all and (max-width: 400px) {
-#main{
-  width: 90%;
-}
-  #rightNav{
-  float: none;
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: 0px;
-}
-#rightNav li{
-  display: inline-block;
-}
+  #main{
+    width: 90%;
+  }
+    #rightNav{
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 0px;
+  }
+  #rightNav li{
+    display: inline-block;
+  }
 
 .imgli2{
   width: 50px;
