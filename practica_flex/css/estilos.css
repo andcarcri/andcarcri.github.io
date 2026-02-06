@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 340px;
+    padding: 20px;
+}
+
+img{
+    width: 80px;
+}
+
+.header{
+    background-color: rgba(128, 128, 128, 0.233);
+    width: 95%;
+    display: flex;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info{
+    margin-left: 20px;
+}
+
+.bio {
+    text-align: left;
+}
+
+.stats{
+    border-top: rgba(128, 128, 128, 0.438) solid 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.actions{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-primary {
+    background-color: rgba(0, 119, 255, 0.575);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    flex-basis: 140px;
+}
+
+.btn-secondary {
+    border: none;
+    border-radius: 5px;
+    flex-basis: 100px;
+}
