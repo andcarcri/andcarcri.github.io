@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise sencilla</title>
+  <link rel="stylesheet" href="css/02.css">
+</head>
+<body>
+  <button id="btn">Probar promesa</button>
+  <div id="caja">Esperando...</div>
+
+  <script>
+    //variables
+    const btn = document.getElementById("btn");
+    const caja = document.getElementById("caja");
+
+    //funciones
+    function tareaAsync() {
+      //resolve y reject puede ser cualquier cosa, por ejemplo a,b
+      return new Promise((resolve, reject) => {
+        caja.textContent = "Cargando...";
+        caja.style.background = "khaki";
+
+        //setTimeout > para retrasar algo en el tiempo que le digas (siempre en milisegundos)
+        setTimeout(() => {
+          const todoBien = true; // cambia a false para probar el error
+
+          if (todoBien) {
+            resolve("Hecho");
+          } else {
+            reject("Falló");
+          }
+          //los 2000 son los milisegundos que tarda en contestar
+        }, 2000);
+      });
+    }
+
+    //eventos
+    btn.addEventListener("click", () => {
+      tareaAsync()
+      // then se ejecuta si contesta con resolve
+        .then((mensaje) => {
+          caja.textContent = mensaje;
+          caja.style.background = "lightgreen";
+        })
+        .catch((error) => {
+          // catch se ejecuta si contesta con reject
+          caja.textContent = error;
+          caja.style.background = "tomato";
+        });
+    });
+
+  </script>
+</body>
+</html>
