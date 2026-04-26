@@ -64,7 +64,7 @@
 
   <script>
     // URL de la API con tu clave (sustituye 'TU_API_KEY' por tu clave real)
-    const apiKey = 'TU_API_KEY';
+    const apiKey = '3b9f7189a1c1cd78a894fab4119c9bb0';
     let titulo = document.getElementById('titulo');
     let boton=document.getElementById('boton'); 
     let inputCiudad = document.getElementById('city');
@@ -102,7 +102,7 @@
 
           // Mostramos los datos en el HTML
           /*  ACABALO  */
-          weather.innerHTML=temperature+description+humidity
+          weather.innerHTML=temperature + ' ' + description + ' ' + humidity
           /*  FIN ACABALO  */        
         })
         .catch(error => {
