@@ -63,37 +63,48 @@
   </form>
 
   <script>
-    // URL de la API con tu clave (sustituye 'TU_API_KEY' por tu clave real)
+    // detallamos la variable const con la clave de la API
     const apiKey = '3b9f7189a1c1cd78a894fab4119c9bb0';
+
+    // creamos variables seleccionando los elementos de HTML
     let titulo = document.getElementById('titulo');
     let boton=document.getElementById('boton'); 
     let inputCiudad = document.getElementById('city');
+
+    //escuchamos el click en el botón
     boton.addEventListener('click', function() {
       event.preventDefault(); // Evita que el formulario se envíe
+      // llamamos a la función que ejecuta la búsqueda
       obtenerClima();
     });
 
     // Detectar la tecla Enter en el campo de texto
     inputCiudad.addEventListener('keydown', function(event) {
+      // verifica si la tecla es ENTER
       if (event.key === 'Enter') {
         event.preventDefault(); // Evita que el formulario se envíe
-        obtenerClima(); // Llama a la función obtenerClima()
+        obtenerClima(); // Llama a la función de búsqueda
       }
     });
 
     function obtenerClima() {
+      // obtenemos el nombre de la ciudad del input
       const ciudad = inputCiudad.value;
-      //const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},ES&units=metric&appid=${apiKey}`;
+      //construimos la url de la API con la ciudad y la clave
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=es&units=metric&appid=${apiKey}`;
+      // actulizamos el título del documento
       titulo.innerHTML="Clima actual " +  ciudad;
       // Usamos fetch para obtener los datos del clima
       fetch(url)
+      //comprobramos si la respuesta es correcta
         .then(response => {
           if (!response.ok) {
             throw new Error('Error al obtener los datos del clima: ' + response.statusText);
           }
+          // convertimos la respuesta (texto) en JSON
           return response.json();
         })
+        // extraemos los datos necesarios del objeto de respuesta (en variables)
         .then((data) => {
           // Extraemos los datos relevantes
           const temperature = data.main.temp;
@@ -101,17 +112,18 @@
           const humidity = data.main.humidity;
 
           // Mostramos los datos en el HTML
-          /*  ACABALO  */
-          weather.innerHTML=temperature + ' ' + description + ' ' + humidity
-          /*  FIN ACABALO  */        
+          weather.innerHTML=temperature + ' ' + description + ' ' + humidity       
         })
+        // capturamos y mostramos los errores en caso de fallo
         .catch(error => {
           console.error('Hubo un problema:', error);
           document.getElementById('weather').textContent = `No se pudo obtener el clima.${error.message}`;
         });
     }
+
     // Llamamos a la función para obtener el clima al cargar la página
         obtenerClima();
+        
   </script>
 </body>
 </html>

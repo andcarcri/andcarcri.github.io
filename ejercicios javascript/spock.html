@@ -175,8 +175,11 @@
     </div>
     
     <script>
+        // definimos el tiempo que espera el ordenador
         let tiempoPensar=5;
+        // definimos las opciones posible en el juego con un array
         const opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
+        // definimos las reglas del tiempo en arrays (que gana a que)
         const reglas = {
                 piedra: ["tijera", "lagarto"],
                 papel: ["piedra", "spock"],
@@ -184,27 +187,30 @@
                 lagarto: ["spock", "papel"],
                 spock: ["tijera", "piedra"]
             };
+            // obtenemos los elementos del DOM necesarios (id de input)
         const listaOpciones = document.getElementById("playerChoice");
+        // variable para almacenar la elección del jugador
         let jugadorEscoge;
+        // variable para almacenar la elección del ordenador
         let ordenadorEscoge;
         const eleccionesEl = document.getElementById("elecciones");
         const resultadoEl  = document.getElementById("resultado");
         const btnReiniciar = document.getElementById("btnReiniciar");
-
+        
+        // 
         listaOpciones.addEventListener("change", function() {
-            /*  ACABALO  */ 
-
-            /*  FIN ACABALO  */            
+            console.log(jugadorEscoge)
+            quienGana(jugadorEscoge, ordenadorEscoge)          
 
         });
 
-        // decide quien gana
+        // función que decide quien gana
         function quienGana(jugador, ordenador) {
             console.log("jugador: ", jugador, " ordenador: ", ordenador);
 
             // Limpiar clases de veredicto previas
             resultadoEl.className = "resultado-veredicto";
-
+            // si falla alguna elección, indicamos que falta información
             if (!jugador || !ordenador) {
                 eleccionesEl.innerHTML = jugador
                     ? `Tú elegiste: <span>${jugador}</span>. Espera a que el ordenador elija.`
@@ -212,9 +218,11 @@
                 resultadoEl.textContent = "—";
                 resultadoEl.classList.add("veredicto-espera");
                 btnReiniciar.style.display = "none";
+                // salimos de la función
                 return;
             }
 
+            // mostramos las elecciones en pantalla
             eleccionesEl.innerHTML = `Tú elegiste: <span>${jugador}</span> &nbsp;|&nbsp; Ordenador eligió: <span>${ordenador}</span>`;
 
             if (jugador === ordenador) {
@@ -230,29 +238,41 @@
                 resultadoEl.textContent = "Error en las reglas.";
                 resultadoEl.classList.add("veredicto-espera");
             }
-
+            // mostramos el botón de volver a jugar
             btnReiniciar.style.display = "block";
         }
 
-        // reinicia la partida
+        // función para resetear el estado del juego
         function reiniciar() {
+            // reseteamos variables
             jugadorEscoge = undefined;
             ordenadorEscoge = undefined;
             tiempoPensar = 5;
+            // vaciamos el selector
             listaOpciones.value = "";
             document.getElementById("ordenadorElige").textContent = "Ordenador Pensando elección ...";
             eleccionesEl.innerHTML = "Elige una opción para jugar.";
             resultadoEl.className = "resultado-veredicto veredicto-espera";
             resultadoEl.textContent = "—";
+            // ocultamos el botón reiniciar
             btnReiniciar.style.display = "none";
+            // iniciamos nueva cuenta atrás
             descuenta();
         }
 
         //Promesa cuando pase el tiempo establecido el ordenador escoge
         function descuenta(){
-            /*  ACABALO  */
-
-            /*  FIN ACABALO  */            
+            // usamos setTimeout para simular "pensar" durante 1 tiempo
+            setTimeout(() => {
+                // generamos índice aleatorio
+                let rn = randomInt(opciones.length-1)
+                //muestra resultado por consola para depurar
+                console.log(ordenadorEscoge)
+                // ejecutamos la lógica del juego
+                quienGana(jugadorEscoge, ordenadorEscoge)
+            }, 
+            // convertimos segundos a milisegundos
+            tiempoPensar*1000);        
 
         }
 
