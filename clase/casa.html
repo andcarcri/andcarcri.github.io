@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de la compra</h1>
+    <input type="text" id="productos" placeholder="Escribe el producto aquí...">
+    <input type="button" id="anyadir" value="Anyadir">
+    <div id="resultado"></div>
+    <script>
+        let producto = document.getElementById("productos")
+        let boton = document.getElementById("anyadir")
+        let listaDeSuper = []
+
+        boton.addEventListener("click", (e) =>{
+            listaDeSuper.push(producto.value)
+            console.log(listaDeSuper)
+        })
+    </script>
+</body>
+</html>

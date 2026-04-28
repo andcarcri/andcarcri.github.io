@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRACTICA</h1>
+    <input type="button" id="boton" value="TirarDados">
+    <script> 
+    let boton = document.getElementById("boton")
+
+       function tirarDados(max, min){
+        let numero = Math.floor(Math.random()*(max-min + 1) + min)
+        console.log(numero)
+       } 
+
+       boton.addEventListener("click", (e) =>{
+        tirarDados(6,1)
+       })
+    </script>
+</body>
+</html>

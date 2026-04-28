@@ -21,6 +21,7 @@
                 resultado.innerHTML="Todo bien"
                 return response.json()
             })
+            // le ponemos a data el nombre de lo que queremos que devuelva
             .then(data => resultado.innerHTML=data.timeZone + " " + data.time)
             .catch (error => resultado.innerHTML="ERROOOOOR " + error)   
         })
